@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {% block head %}
+            <title>Guilherme Doval</title>
+        {% endblock %}
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="links">
+                <a href="/">Sobre</a>
+                <a href="/portfolio">Aulas</a>
+            </nav>
+        </header>
+        
+        {% block content %}
+
+        {% endblock %}
+
+    </body>
+</html>
