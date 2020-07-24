@@ -1,3 +1,22 @@
 {
-  "instructors": []
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Daniela",
+      "avatar_url": "https://danielagoncalves.pt/wp-content/uploads/2020/07/IMG_5930-scaled.jpg",
+      "birth": 825206400000,
+      "gender": "F",
+      "services": "yoga, corrida",
+      "created_at": 1595609675075
+    },
+    {
+      "id": 2,
+      "name": "Guilherme",
+      "avatar_url": "https://scontent.flis8-1.fna.fbcdn.net/v/t1.0-9/23130966_1516526478384755_3520597071156871154_n.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_ohc=W9-X1Zl4BcUAX9_AKPT&_nc_ht=scontent.flis8-1.fna&oh=ef8d918fc13018fef02c680951af8aa7&oe=5F3FD873",
+      "birth": 783043200000,
+      "gender": "M",
+      "services": "jiu-jitsu, musculação",
+      "created_at": 1595609769351
+    }
+  ]
 }
