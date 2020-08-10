@@ -145,7 +145,7 @@ header {
 
 /*===Form===*/
 
-input {
+input, select {
     width: 100%;
     outline: none;
     color: #555;
@@ -161,6 +161,10 @@ input[type="radio"]{
 input::placeholder {
     font-size: 16px;
     font-weight: normal;
+}
+
+button {
+    font-family:'Roboto', sans-serif;
 }
 
 button[type="submit"],
@@ -216,6 +220,10 @@ th {
     font-size: 14px;
 }
 
+/* tbody tr td{
+    font-weight: bold;
+} */
+
 tbody tr:last-child td {
     border-bottom: none;
 }
@@ -236,7 +244,8 @@ tbody tr td:first-child span {
     border: 2px solid white;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
     background-color: var(--primary-color);
     padding: 8px 16px;
     text-decoration: none;
@@ -244,6 +253,11 @@ tbody tr td:last-child a {
     color: white;
     font-size: 12px;
     border-radius: 4px;
+}
+
+.table-container > a {
+    margin-bottom: 16px;
+    display: inline-block;
 }
 
 .table-container thead tr th:last-child,

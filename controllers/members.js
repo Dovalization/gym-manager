@@ -22,7 +22,7 @@ exports.show = (req,res) => {
 
     const member = {
         ...foundMember,
-        age: age(foundMember.birth),
+        birth: date(foundMember.birth).birthDay
     }
 
     return res.render("members/show", { member })
@@ -45,21 +45,21 @@ exports.post = (req,res) => {
     }
 
     //Tratamentos dos dados
-    let {avatar_url, birth, name, services, gender} = req.body
 
-    birth = Date.parse(birth)
-    const created_at = Date.now()
-    const id = Number(data.members.length + 1)
+    birth = Date.parse(req.body.birth)
+
+    let id = 1
+    const lastMember = data.members[data.members.length - 1]
+    if (lastMember) {
+        id = lastMember.id + 1
+    }
+    
 
     //Dados inseridos no array
     data.members.push({
+        ...req.body,
         id,
-        name,
-        avatar_url,
-        birth,
-        gender,
-        services,
-        created_at
+        birth
     })
 
     //Gravação em arquivo .json
@@ -86,7 +86,7 @@ exports.edit = (req,res) => {
 
     const member = {
         ...foundMember,
-        birth: date(foundMember.birth)
+        birth: date(foundMember.birth).iso
     }
 
     return res.render('members/edit', { member })
